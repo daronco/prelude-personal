@@ -12,3 +12,5 @@
           '(lambda ()
              (setq python-indent 2)))
 (setq js-indent-level 2)                ; 2-space indent for javascript
+
+(global-whitespace-mode 1)
