@@ -17,4 +17,5 @@
 (global-whitespace-mode 1)
 
 ; Turn xclip on (requires system package xclip installed!)
-(xclip-mode 1)
+(if (boundp 'xclip-mode)
+    (xclip-mode 1))
