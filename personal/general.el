@@ -15,3 +15,6 @@
 
 ; Always show whitespaces
 (global-whitespace-mode 1)
+
+; Turn xclip on (requires system package xclip installed!)
+(xclip-mode 1)
