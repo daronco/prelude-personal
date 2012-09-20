@@ -5,3 +5,9 @@
 ; They are used by paredit: http://emacswiki.org/emacs/ParEdit
 (global-set-key (kbd "C-<left>") 'backward-word)
 (global-set-key (kbd "C-<right>") 'forward-word)
+
+; Rspec
+(global-set-key (kbd "C-c M-f") 'rspec-verify)         ; entire file
+(global-set-key (kbd "C-c M-s") 'rspec-verify-single)  ; current spec
+(global-set-key (kbd "C-c M-a") 'rspec-verify-all)     ; everything
+(global-set-key (kbd "C-c M-t") 'rspec-toggle-spec-and-target)

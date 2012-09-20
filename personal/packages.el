@@ -4,7 +4,7 @@
 (defvar personal-packages
   '(flymake-ruby flymake-cursor flymake-css flymake-sass
     flymake-haml flymake-coffee flymake-python-pyflakes
-    jade-mode xclip)
+    jade-mode xclip rspec-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun personal-packages-installed-p ()
@@ -24,3 +24,5 @@
         (package-install p)))))
 
 (personal-install-packages)
+
+(require 'rspec-mode)
