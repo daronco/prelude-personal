@@ -19,3 +19,9 @@
 ; Turn xclip on (requires system package xclip installed!)
 (if (boundp 'xclip-mode)
     (xclip-mode 1))
+
+; Remove the hook that enables abbrev-mode in text files
+; Was causing an annoying error that removed words after pressing space
+; with the message:
+; "Symbol's function definition is void: snippet-insert"
+(remove-hook 'text-mode-hook 'abbrev-mode)
