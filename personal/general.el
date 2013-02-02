@@ -8,13 +8,15 @@
 
 ; Indentation
 (setq-default tab-width 2)              ; 2-space indent as default
+(setq ruby-indent-level 2)              ; 2-space in ruby
 (add-hook 'python-mode-hook             ; 2-space indent in python
           '(lambda ()
              (setq python-indent 2)))
 (setq js-indent-level 2)                ; 2-space indent for javascript
+(setq css-indent-offset 2)              ; 2-space in css/scss
 
 ; Always show whitespaces
-(global-whitespace-mode 1)
+(global-whitespace-mode 1) ; TODO: it's working but whitespaces aren't being shown
 
 ; Turn xclip on (requires system package xclip installed!)
 (if (boundp 'xclip-mode)
@@ -25,3 +27,12 @@
 ; with the message:
 ; "Symbol's function definition is void: snippet-insert"
 (remove-hook 'text-mode-hook 'abbrev-mode)
+
+; Associate files and extensions with modes
+(setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rdoc$" . text-mode) auto-mode-alist))
+
+; Do NOT compile scss on save >.<
+(setq scss-compile-at-save nil)
