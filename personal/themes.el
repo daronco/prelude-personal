@@ -3,13 +3,13 @@
 ; Customize zenburn
 (let ((class '((class color) (min-colors 89)))
       (zenburn-fg "#dcdccc")
-      (zenburn-bg-1 "#161616")
-      (zenburn-bg-05 "#1c1c1c")
-      (zenburn-bg "#262626")
-      (zenburn-bg+05 "#434343")
-      (zenburn-bg+1 "#4f4f4f")
+      (zenburn-bg-1 "#101010")
+      (zenburn-bg-05 "#161616")
+      (zenburn-bg "#1b1b1b")
+      (zenburn-bg+05 "#232323")
+      (zenburn-bg+1 "#3f3f3f")
       (zenburn-error "#800080")
-      (zenburn-yellow "#E2E28F")
+      (zenburn-yellow "#d4ef59")
       )
   (custom-theme-set-faces
    'zenburn
