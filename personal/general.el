@@ -33,6 +33,22 @@
 ; "Symbol's function definition is void: snippet-insert"
 (remove-hook 'text-mode-hook 'abbrev-mode)
 
+; Scroll half page on page-up and page-down
+; From: http://www.emacswiki.org/emacs/HalfScrolling
+(defun window-half-height ()
+  (max 1 (/ (1- (window-height (selected-window))) 2)))
+(defun scroll-up-half ()
+  (interactive)
+  (scroll-up (window-half-height)))
+(defun scroll-down-half ()
+  (interactive)
+  (scroll-down (window-half-height)))
+(global-set-key [next] 'scroll-up-half)
+(global-set-key [prior] 'scroll-down-half)
+
+; Scroll when near the bottom/top of screen
+(setq scroll-margin 7)
+
 ; Associate files and extensions with modes
 (setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
