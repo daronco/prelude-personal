@@ -49,12 +49,6 @@
 ; Scroll when near the bottom/top of screen
 (setq scroll-margin 7)
 
-; Associate files and extensions with modes
-(setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.rdoc$" . text-mode) auto-mode-alist))
-
 ; Do NOT compile scss on save >.<
 (setq scss-compile-at-save nil)
 
