@@ -41,3 +41,14 @@
 
 ; Do NOT compile scss on save >.<
 (setq scss-compile-at-save nil)
+
+; TODO: markdown mode sucks right now, ctrl+arrows is mapped to other things
+(setq auto-mode-alist (cons '("\\.md$" . text-mode) auto-mode-alist))
+; Keybidings define in markdown-mode are
+; causing page down and page up to call these bindings and then
+; print ~6 and ~5 in the text.
+; TODO: these are not working :(
+;; (global-unset-key (kbd "M-[")) ; 'markdown-beginning-of-block
+;; (global-unset-key (kbd "M-]")) ; 'markdown-end-of-block
+;; (define-key (current-global-map) (kbd "M-[") nil)
+;; (define-key (current-global-map) (kbd "M-]") nil)
