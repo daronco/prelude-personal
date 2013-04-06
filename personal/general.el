@@ -1,3 +1,5 @@
+; TODO: shortcuts for regex search
+
 ; Disabled guru-mode
 (defun disable-guru-mode ()
   (guru-mode -1))
@@ -17,6 +19,9 @@
 
 ; Always show whitespaces
 (global-whitespace-mode 1) ; TODO: it's working but whitespaces aren't being shown
+
+; Default line-length to 100 chars
+(setq whitespace-line-column 100)
 
 ; Turn xclip on (requires system package xclip installed!)
 (if (boundp 'xclip-mode)
