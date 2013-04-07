@@ -1,4 +1,8 @@
 ; TODO: shortcuts for regex search
+; TODO: downcase and uppercase
+; TODO: bookmarks
+; TODO: mark matches when opening files (solarized does it)
+; TODO: mark TODOs
 
 ; Disabled guru-mode
 (defun disable-guru-mode ()
@@ -52,13 +56,8 @@
 ; Do NOT compile scss on save >.<
 (setq scss-compile-at-save nil)
 
-; TODO: markdown mode sucks right now, ctrl+arrows is mapped to other things
-(setq auto-mode-alist (cons '("\\.md$" . text-mode) auto-mode-alist))
-; Keybidings define in markdown-mode are
-; causing page down and page up to call these bindings and then
-; print ~6 and ~5 in the text.
-; TODO: these are not working :(
-;; (global-unset-key (kbd "M-[")) ; 'markdown-beginning-of-block
-;; (global-unset-key (kbd "M-]")) ; 'markdown-end-of-block
-;; (define-key (current-global-map) (kbd "M-[") nil)
-;; (define-key (current-global-map) (kbd "M-]") nil)
+; TODO: markdown mode sucks right now, page down and up are mapped to other things
+;       tried THOUSANDS of commands to unset the mapping of "M-[" (because page down
+;       and up are interpreted as "M-[ ~ 6" and "M-[ ~ 5") but didn't work.
+;       For now I just commented the keybindings in markdown-mode's file.
+;       Search for: (define-key map (kbd "M-[") 'markdown-beginning-of-block)
