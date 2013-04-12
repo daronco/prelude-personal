@@ -1,8 +1,6 @@
 ; TODO: shortcuts for regex search
 ; TODO: downcase and uppercase
 ; TODO: bookmarks
-; TODO: mark matches when opening files (solarized does it)
-; TODO: mark TODOs
 
 ; Disabled guru-mode
 (defun disable-guru-mode ()

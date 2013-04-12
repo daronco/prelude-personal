@@ -16,4 +16,5 @@
 (add-hook 'scss-mode-hook 'turn-on-fic-mode)
 (add-hook 'less-mode-hook 'turn-on-fic-mode)
 (add-hook 'el-mode-hook 'turn-on-fic-mode)
+(add-hook 'jade-mode-hook 'turn-on-fic-mode)
 (font-lock-fontify-buffer)
