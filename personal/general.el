@@ -1,6 +1,7 @@
 ; TODO: shortcuts for regex search
 ; TODO: downcase and uppercase
 ; TODO: bookmarks
+; TODO: orgmode: http://orgmode.org/
 
 ; Disabled guru-mode
 (defun disable-guru-mode ()
