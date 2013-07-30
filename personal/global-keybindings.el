@@ -13,7 +13,7 @@
 (global-set-key (kbd "C-c M-t") 'rspec-toggle-spec-and-target)
 
 ;;; multiple-cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-c C-n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this-dwin)
+;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;; (global-set-key (kbd "C-c C-n") 'mc/mark-next-like-this)
+;; (global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
+;; (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this-dwin)
