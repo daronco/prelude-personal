@@ -55,6 +55,12 @@
 ; Do NOT compile scss on save >.<
 (setq scss-compile-at-save nil)
 
+;; smart-mode-line makes the mode-line better
+(require 'smart-mode-line)
+(setq sml/override-theme nil) ; don't override the colors set by the theme
+(if after-init-time (sml/setup)
+  (add-hook 'after-init-hook 'sml/setup))
+
 ; TODO: markdown mode sucks right now, page down and up are mapped to other things
 ;       tried THOUSANDS of commands to unset the mapping of "M-[" (because page down
 ;       and up are interpreted as "M-[ ~ 6" and "M-[ ~ 5") but didn't work.
