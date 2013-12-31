@@ -1,4 +1,8 @@
-;; Customized themes
+;; Zenburn is loaded by default by Prelude.
+;; To load another theme, use something like:
+;; (load-theme 'base16-chalk t)
+
+;; Customize zenburn a bit
 
 (defun setup-my-colors ()
 
